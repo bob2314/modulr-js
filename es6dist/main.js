@@ -32,14 +32,14 @@ var randomCat = {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            console.log("meow, I'm an async function that gets a random cat....");
+            console.log("Woof, I'm an async function that gets a random dog....");
             width = getRandomInt(100, 1028);
             height = getRandomInt(100, 700);
             _context.next = 5;
-            return fetch("http://placekitten.com/".concat(width, "/").concat(height));
+            return fetch("http://placedog.net/".concat(width, "/").concat(height));
           case 5:
             cat = _context.sent;
-            console.log('meow! meow! 🐈 🐈 🐈 🐈 i have a cat!!!!', cat, cat.url);
+            console.log('woof! woof! 🐈 🐈 🐈 🐈 i have a dog!!!!', cat, cat.url);
             img = document.createElement('img');
             img.src = cat.url;
             document.body.appendChild(img);

@@ -8,7 +8,7 @@ describe('randomCat', () => {
   let fetchMock: jest.Mock;
 
   beforeEach(() => {
-    fetchMock = jest.fn().mockResolvedValue({ url: 'https://placekitten.com' }) as jest.Mock;
+    fetchMock = jest.fn().mockResolvedValue({ url: 'https://placedog.net' }) as jest.Mock;
 
     global.fetch = fetchMock;
   });
@@ -20,6 +20,6 @@ describe('randomCat', () => {
   it('should load a cat', async () => {
     const cat = await randomCat.loadACat();
     expect(cat).toBeDefined();
-    expect(cat.url).toContain('https://placekitten.com');
+    expect(cat.url).toContain('https://placedog.net');
   });
 });
